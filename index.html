@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Switch Test Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: system-ui, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        button {
+            padding: 14px 22px;
+            border: 0;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Tab Switch Test</h1>
+        <p>ReOpen the test page, then switch focus between windows/tabs.</p>
+
+        <button id="openTest">
+            Go-back/Open
+        </button>
+    </main>
+
+    <script>
+        const TEST_URL =
+            "https://hongyuekai427-bit.github.io/tab-focus-demo/";
+
+        document
+            .getElementById("openTest")
+            .addEventListener("click", () => {
+                window.open(
+                    TEST_URL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+            });
+    </script>
+</body>
+</html>
